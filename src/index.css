@@ -1,0 +1,163 @@
+*{
+  margin: 0%;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+                                /* Home */
+.home img {
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+                                /* NavBar */
+.navbar {
+  background-color: #0F0F0F;
+  display: flex;
+  width: 100%;
+  height: 70px;
+}
+.navbar .logo {
+  display: grid;
+  align-items: center;
+  padding-right: 330px;
+  margin: 0px auto ;
+  letter-spacing: 7px;
+}
+.navbar .logo .lg {
+  text-decoration: none;
+  color: white;
+}
+.navbar .links {
+  color: white;
+  font-weight: 700;
+  font-size: large;
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-gap: 40px;
+  list-style: none;
+  align-items: center;
+  padding-left: 100px;
+  margin: 0px auto;
+}
+.ln {
+  text-decoration: none;
+  color: white;
+}
+.ln:hover {
+  color: #00cde8;
+  transition: all 0.2s ease-in-out;
+}
+                                /* Branches */
+.branches {
+  background-color: #0F0F0F;
+  height: 100vh;
+  width: 24%;
+}
+.backG{
+  background-color: #0F0F0F;
+}
+.branches ul {
+  color: white;
+  padding-top: 30px;
+  font-size: 18px;
+  display: grid;
+  grid-template-rows: repeat(4,auto);
+  grid-gap: 5px;
+  list-style: none;
+}
+.link-branches {
+  margin-left: -10%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+  border: 2px solid hsl(0, 0%, 0%,0.2%);
+  border-radius: 10px;
+}
+.link-branches:hover {
+  border: 2px solid #00cde8;
+}
+                              /* Head title */
+.head-title {
+  display: block;
+  color: whitesmoke;
+  background-color: #0F0F0F;
+  text-align: center;
+  border: 2px solid rgba(250, 250, 250, 0.308);
+  padding: 8px 0;
+  margin-left: 24%;
+  margin-top: -46.5%;
+}
+                              /* Content */
+.content-zone {
+  margin-left: 400px;
+  margin-top: 20px;
+  /* width: min-content; */
+}
+.table{
+  overflow:auto;
+}
+.alert{
+  margin-left: 400px;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+.add-button button {
+  height: 40px;
+  background-color: whitesmoke;
+  color: #0F0F0F;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid rgba(0, 0, 0, 0.555);
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.add-button button:hover {
+  color: whitesmoke;
+  background-color: #0F0F0F;
+  border: 2px solid hsla(187, 100%, 50%, 0.623);
+  transition: all 0.3s ease-in-out;
+}
+                                /* Facture */
+
+.factureContent {
+  margin-top: 20px;
+  margin-left: 110px;
+}
+
+.tableFacture{
+  margin-top: 10px;
+  margin-bottom: 100px;
+  max-width: min-content;
+  margin-left: 100px;
+  display: block;
+  width: 500px;
+}
+
+.title {
+  margin-left: 50px;
+  margin-bottom: 100px;
+  padding-top: 70px;
+  font-size: xx-large;
+  font-weight: 700;
+  color: #200555;
+  
+}
+
+.table-title{
+  margin-left: 100px;
+  color: #200555;
+  font-weight: 700;
+}
+
+.footerFacture {
+  display: flexbox;
+  margin-top: 110px;
+  left: 0;
+  margin-left: 130px;
+  text-align: center;
+  max-width: 600px;
+}
+
+
+                            

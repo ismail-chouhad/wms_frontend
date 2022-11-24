@@ -1,0 +1,68 @@
+import { TextField, Grid, Button, Alert } from '@mui/material';
+import axios from 'axios';
+import { Fragment, useState } from 'react';
+import ReferentielNav from '../ReferentielNav';
+
+export default function NewTVA() {
+
+    const buttonStyle = {  marginTop: "10px" }
+    const [tvaTaux,setTvaTaux] = useState('')
+
+    const [successAlert, setSuccessAlert] = useState(false);
+    const [successAlertContent, setSuccessAlertContent] = useState('');
+
+    const [errorAlert, setErrorAlert] = useState(false);
+    const [errorAlertContent, setErrorAlertContent] = useState('');
+
+    const handleClick=(e)=>{
+        e.preventDefault()
+        console.log(tvaTaux)
+        axios.post('http://localhost:8081/tvas/save/'+tvaTaux , {
+        })
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+            if(res.data === "TVA ajoutée")
+            {
+                setSuccessAlertContent(res.data);
+                setSuccessAlert(true);
+                setErrorAlert(false);
+            }
+            else if(res.data === "TVA existe déjà")
+            {
+                setErrorAlertContent(res.data);
+                setErrorAlert(true);
+                setSuccessAlert(false);
+            }
+        })
+    }
+
+  return (
+    <div>
+        <ReferentielNav/>
+        <h3 className="head-title">Ajouter Tva</h3>
+        {successAlert ? <Alert severity="success" className='alert'>{successAlertContent}</Alert> : <></> }
+        {errorAlert ? <Alert severity="error" className='alert'>{errorAlertContent}</Alert> : <></> }
+        <Fragment>
+            <Grid container className='content-zone'>
+                <Grid item xs={6} sm={6}>
+                    <TextField
+                    required
+                    id="tvaTaux"
+                    name="tvaTaux"
+                    label="Tva name"
+                    fullWidth
+                    autoComplete="given-name"
+                    variant="standard"
+                    value={tvaTaux}
+                    onChange={(e)=>setTvaTaux(e.target.value)}/>
+                </Grid>
+                <Grid item xs={12} style={buttonStyle}>
+                    <Button variant="contained" onClick={handleClick}>Enregistrer</Button>
+                </Grid>
+	        </Grid>
+        </Fragment>
+        
+    </div>
+  )
+}
